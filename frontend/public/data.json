@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "category": "Phone Accessories",
+    "name": "Phone Charms",
+    "price": 100,
+    "image": "/assets/products/phone-charm.jpg"
+  },
+  {
+    "id": 2,
+    "category": "Hand Wears",
+    "name": "Arm Cuff",
+    "price": 200,
+    "image": "/assets/products/arm-cuff.jpg"
+  },
+  {
+    "id": 3,
+    "category": "Hand Wears",
+    "name": "Chain Bracelet",
+    "price": 300,
+    "image": "/assets/products/chain-bracelet.jpg"
+  },
+  {
+    "id": 4,
+    "category": "Hand Wears",
+    "name": "Chunky Bracelet",
+    "price": 400,
+    "image": "/assets/products/chunky-bracelet.jpg"
+  },
+  {
+    "id": 5,
+    "category": "Ear Wears",
+    "name": "Chunky Earrings",
+    "price": 500,
+    "image": "/assets/products/chunky-earring.jpg"
+  }
+]
