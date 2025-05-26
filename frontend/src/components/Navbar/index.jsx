@@ -1,6 +1,21 @@
 import React from "react";
 
 const Navbar = () => {
+  const [sticky, setSticky] = React.useState(false);
+  React.useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const navbarItems = (
     <>
       <li>
@@ -19,7 +34,13 @@ const Navbar = () => {
   );
   return (
     <>
-      <div className="navbar bg-base-100 shadow-sm max-w-7xl mx-auto px-4">
+      <div
+        className={`navbar bg-base-100 fixed top-0 left-0 right-0 w-full shadow-sm max-w-7xl mx-auto px-4 ${
+          sticky
+            ? "navbar-sticky shadow-md bg-base-200 duration-300 transition-all ease-in-out"
+            : ""
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
