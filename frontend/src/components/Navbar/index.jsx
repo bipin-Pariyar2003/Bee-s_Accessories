@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`max-w-screen-2xl h-16 py-2 container mx-auto px-4 md:px-20 fixed top-0 z-50 right-0 left-0 ${
+        className={`max-w-screen-2xl h-14 md:h-16 py-2 container mx-auto px-4 md:px-20 fixed top-0 z-50 right-0 left-0 ${
           sticky
             ? "navbar-sticky shadow-md bg-base-200 duration-300 transition-all ease-in-out"
             : ""
@@ -69,7 +69,10 @@ const Navbar = () => {
               {navbarItems}
             </ul>
           </div>
-          <a className="btn btn-ghost text-md md:text-2xl " onClick={() => navigate("/")}>
+          <a
+            className="btn btn-ghost text-md md:text-2xl  "
+            onClick={() => navigate("/")}
+          >
             Bee's Accessories 🐝
           </a>
         </div>

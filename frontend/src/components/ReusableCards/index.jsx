@@ -13,8 +13,11 @@ const ReusableCards = ({ item }) => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">
-              {item.name} <div className="badge badge-secondary ">{item.category}</div>
+            <h2 className="card-title font-thin">
+              {item.name}{" "}
+              <div className="badge badge-secondary font-thin text-xs  ">
+                {item.category}
+              </div>
             </h2>
             <p>
               A card component has a figure, a body part, and inside body there are title
