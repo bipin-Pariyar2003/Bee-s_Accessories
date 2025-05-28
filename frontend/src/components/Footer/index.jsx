@@ -3,7 +3,7 @@ import React from "react";
 const Fotoer = () => {
   return (
     <div>
-      <footer className="footer mt-10 footer-horizontal footer-center text-base-content rounded p-10">
+      <footer className="footer mt-10 footer-horizontal footer-center text-base-content rounded p-10 dark:bg-gray-800 dark:text-white dark:border-gray-700">
         <nav className="grid grid-flow-col gap-4">
           <a className="link link-hover">About us</a>
           <a className="link link-hover">Contact</a>

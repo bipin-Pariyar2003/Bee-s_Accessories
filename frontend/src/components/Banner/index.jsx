@@ -3,7 +3,7 @@ import roundedLogo from "/images/rounded-logo.png";
 const Banner = () => {
   const emailField = (
     <>
-      <label className="input validator">
+      <label className="input validator dark: text:gray-900">
         <svg
           className="h-[1em] opacity-50"
           xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,12 @@ const Banner = () => {
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
           </g>
         </svg>
-        <input type="email" placeholder="mail@site.com" required />
+        <input
+          className="dark: text:gray-900"
+          type="email"
+          placeholder="mail@site.com"
+          required
+        />
       </label>
       <div className="validator-hint hidden">Enter valid email address</div>
     </>
