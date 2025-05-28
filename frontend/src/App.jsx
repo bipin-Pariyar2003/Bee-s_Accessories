@@ -8,15 +8,17 @@ import Contact from "./views/Contact";
 const App = () => {
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/browse" element={<Browse />} />
-        </Routes>
-      </Router>
+      <div className="dark:bg-gray-800 dark:text-white">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/browse" element={<Browse />} />
+          </Routes>
+        </Router>
+      </div>
     </>
   );
 };
