@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [sticky, setSticky] = React.useState(false);
   React.useEffect(() => {
     const handleScroll = () => {
@@ -18,16 +20,16 @@ const Navbar = () => {
 
   const navbarItems = (
     <>
-      <li>
+      <li onClick={() => navigate("/")}>
         <a>Home</a>
       </li>
-      <li>
+      <li onClick={() => navigate("/browse")}>
         <a>Accessories</a>
       </li>
-      <li>
+      <li onClick={() => navigate("/about")}>
         <a>About</a>
       </li>
-      <li>
+      <li onClick={() => navigate("/contact")}>
         <a>Contact</a>
       </li>
     </>
@@ -67,7 +69,9 @@ const Navbar = () => {
               {navbarItems}
             </ul>
           </div>
-          <a className="btn btn-ghost text-md md:text-2xl ">Bee's Accessories 🐝</a>
+          <a className="btn btn-ghost text-md md:text-2xl " onClick={() => navigate("/")}>
+            Bee's Accessories 🐝
+          </a>
         </div>
         <div className="navbar-end space-x-2">
           <div className="navbar-center hidden lg:flex">

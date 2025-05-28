@@ -32,12 +32,12 @@ const Banner = () => {
 
         <div className="w-full order-2 md: order-1 md:w-1/2 mt-8 md:mt-32 ">
           <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl ">
+            <h1 className="text-4xl md:text-6xl font-thin">
               {" "}
               Unveiling Style, <span className="text-pink-500">Redefined✨</span>
             </h1>
-            <h1 className="text-2xl">Worldwide Delivery🌍</h1>
-            <h1 className="text-2xl"> Online Based from Kathmandu, Nepal📍</h1>
+            <h1 className="text-2xl font-thin">Worldwide Delivery🌍</h1>
+            <h1 className="text-2xl font-thin"> Online Based from Kathmandu, Nepal📍</h1>
             <h1> No Exchange | No Refund</h1>
             {emailField}
           </div>
