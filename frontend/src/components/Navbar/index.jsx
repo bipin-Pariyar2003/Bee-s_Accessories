@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const isHomePage = window.location.pathname === "/";
+  const isBrowsePage = window.location.pathname === "/browse";
+  const isAboutPage = window.location.pathname === "/about";
+  const isContactPage = window.location.pathname === "/contact";
   const [theme, setTheme] = React.useState(localStorage.getItem("theme") || "light");
   const element = document.documentElement;
   React.useEffect(() => {
@@ -33,16 +37,28 @@ const Navbar = () => {
 
   const navbarItems = (
     <>
-      <li onClick={() => navigate("/")}>
+      <li
+        onClick={() => navigate("/")}
+        className={`${isHomePage ? "text-pink-500 underline" : ""}`}
+      >
         <a>Home</a>
       </li>
-      <li onClick={() => navigate("/browse")}>
+      <li
+        onClick={() => navigate("/browse")}
+        className={`${isBrowsePage ? "text-pink-500 underline" : ""}`}
+      >
         <a>Accessories</a>
       </li>
-      <li onClick={() => navigate("/about")}>
+      <li
+        onClick={() => navigate("/about")}
+        className={`${isAboutPage ? "text-pink-500 underline" : ""}`}
+      >
         <a>About</a>
       </li>
-      <li onClick={() => navigate("/contact")}>
+      <li
+        onClick={() => navigate("/contact")}
+        className={`${isContactPage ? "text-pink-500 underline" : ""}`}
+      >
         <a>Contact</a>
       </li>
     </>
