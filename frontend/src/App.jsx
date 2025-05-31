@@ -4,6 +4,7 @@ import Browse from "views/Browse";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./views/About";
 import Contact from "./views/Contact";
+import SignUp from "./views/SignUp";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/browse" element={<Browse />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
         </Router>
       </div>

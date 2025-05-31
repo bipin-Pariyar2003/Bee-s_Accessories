@@ -11,7 +11,7 @@ const Login = () => {
               ✕
             </button>
           </form>
-          <h3 className="font-bold text-lg underline">Log In</h3>
+          <h3 className="font-bold text-lg underline text-2xl">Log In</h3>
           <div className="py-6 ">
             <form className="flex flex-col gap-6 mt-4">
               <input
@@ -32,9 +32,9 @@ const Login = () => {
             </form>
           </div>
           <p className="text-center text-sm">
-            Don't have an account?{" "}
-            <a href="/register" className="text-pink-500 underline">
-              Register
+            Don't have an account? &nbsp;
+            <a href="/signup" className="text-pink-500 underline">
+              Sign Up
             </a>
           </p>
         </div>
