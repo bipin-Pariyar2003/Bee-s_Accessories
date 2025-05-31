@@ -3,8 +3,10 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import accesoryRoute from "./route/accessories.route.js";
 import cors from "cors";
+import usersRoute from "./route/users.route.js";
 
 const app = express();
+app.use(express.json());
 app.use(cors());
 dotenv.config();
 
@@ -24,6 +26,7 @@ try {
 
 //define routes
 app.use("/accessories", accesoryRoute);
+app.use("/users", usersRoute);
 
 app.listen(port, () => {
   console.log(`Server Started at port: ${port}`);
