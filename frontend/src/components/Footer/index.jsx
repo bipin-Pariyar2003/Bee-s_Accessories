@@ -13,8 +13,12 @@ const Fotoer = () => {
           <a className="link link-hover" onClick={() => navigate("/contact")}>
             Contact
           </a>
-          {/* <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a> */}
+          <a
+            className="link link-hover text-pink-500 hover:text-pink-700"
+            onClick={() => navigate("/browse")}
+          >
+            Shop Now
+          </a>
         </nav>
         <nav>
           <div className="grid grid-flow-col gap-4">

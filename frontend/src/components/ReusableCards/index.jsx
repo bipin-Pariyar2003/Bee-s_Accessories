@@ -4,7 +4,7 @@ const ReusableCards = ({ item }) => {
   return (
     <>
       <div className="max-w-screen-2xl my-10 container mx-auto px-4 md:px-20">
-        <div className="card bg-base-100 w-96 shadow-xl hover:scale-105  shadow-2xl transition-all duration-300 dark:bg-gray-800 dark:text-white dark:border-gray-700">
+        <div className="card bg-base-100 w-92 md:w-96 shadow-xl hover:scale-105  shadow-2xl transition-all duration-300 dark:bg-gray-800 dark:text-white dark:border-gray-700">
           <figure>
             <img
               src={item.image}

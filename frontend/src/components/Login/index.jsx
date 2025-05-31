@@ -1,37 +1,79 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 
 const Login = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log("Login Data:", data);
+    reset(); // Optional: Reset form after submit
+    // close modal manually if needed: document.getElementById('my_modal_3').close()
+  };
+
   return (
     <>
-      <dialog id="my_modal_3" className="modal ">
+      <dialog id="my_modal_3" className="modal">
         <div className="modal-box w-96">
           <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
               ✕
             </button>
           </form>
-          <h3 className="font-bold text-lg underline text-2xl">Log In</h3>
-          <div className="py-6 ">
-            <form className="flex flex-col gap-6 mt-4">
+
+          <h3 className="font-bold text-2xl underline text-center">Log In</h3>
+
+          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6 mt-6">
+            {/* Email Field */}
+            <div>
               <input
                 type="email"
                 placeholder="Email"
-                className="input w-full outline-none"
-                required
+                className="input input-bordered w-full"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^\S+@\S+$/i,
+                    message: "Invalid email address",
+                  },
+                })}
               />
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+              )}
+            </div>
+
+            {/* Password Field */}
+            <div>
               <input
                 type="password"
                 placeholder="Password"
                 className="input input-bordered w-full"
-                required
+                {...register("password", {
+                  required: "Password is required",
+                  minLength: {
+                    value: 6,
+                    message: "Password must be at least 6 characters",
+                  },
+                })}
               />
-              <div className="flex items-center justify-center gap-4">
-                <button className="btn bg-pink-500 text-white w-20">Log In</button>
-              </div>
-            </form>
-          </div>
-          <p className="text-center text-sm">
+              {errors.password && (
+                <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>
+              )}
+            </div>
+
+            <div className="flex items-center justify-center">
+              <button type="submit" className="btn bg-pink-500 text-white w-24">
+                Log In
+              </button>
+            </div>
+          </form>
+
+          <p className="text-center  text-sm mt-4">
             Don't have an account? &nbsp;
             <a href="/signup" className="text-pink-500 underline hover:text-pink-700">
               Sign Up
@@ -42,4 +84,5 @@ const Login = () => {
     </>
   );
 };
+
 export default Login;

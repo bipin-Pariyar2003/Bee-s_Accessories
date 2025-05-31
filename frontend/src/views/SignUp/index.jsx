@@ -2,53 +2,104 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 const SignUp = () => {
   const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log("Sign Up Data:", data);
+    reset(); // optional
+    // You can navigate or show success toast here
+  };
+
   return (
     <>
       <div>
         <Navbar />
-        <div className="flex flex-col space-y-8 items-center justify-center h-screen  ">
-          <div
-            id="my_modal_3"
-            className=" border-2 border-gray-300 rounded-lg shadow-xl p-12 w-96"
-          >
+        <div className="flex flex-col space-y-8 items-center justify-center h-screen">
+          <div className="border-2 border-gray-300 rounded-lg shadow-xl p-12 w-96">
             <div className="max-w-md mx-auto">
-              <form method="dialog">
-                {/* if there is a button in form, it will close the modal */}
-              </form>
-              <h3 className="font-bold text-lg underline text-2xl">Sign Up</h3>
-              <div className="py-6 ">
-                <form className="flex flex-col gap-6 mt-4">
+              <h3 className="font-bold text-2xl underline text-center">Sign Up</h3>
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="flex flex-col gap-6 mt-6"
+              >
+                {/* Name */}
+                <div>
                   <input
                     type="text"
                     placeholder="Name"
-                    className="input w-full outline-none"
-                    required
+                    className="input input-bordered w-full"
+                    {...register("name", {
+                      required: "Name is required",
+                      minLength: {
+                        value: 3,
+                        message: "Name must be at least 3 characters",
+                      },
+                    })}
                   />
+                  {errors.name && (
+                    <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+                  )}
+                </div>
+
+                {/* Email */}
+                <div>
                   <input
                     type="email"
                     placeholder="Email"
-                    className="input w-full outline-none"
-                    required
+                    className="input input-bordered w-full"
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^\S+@\S+$/i,
+                        message: "Invalid email address",
+                      },
+                    })}
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                  )}
+                </div>
+
+                {/* Password */}
+                <div>
                   <input
                     type="password"
                     placeholder="Password"
                     className="input input-bordered w-full"
-                    required
+                    {...register("password", {
+                      required: "Password is required",
+                      minLength: {
+                        value: 6,
+                        message: "Password must be at least 6 characters",
+                      },
+                    })}
                   />
-                  <div className="flex items-center justify-center gap-4">
-                    <button className="btn bg-pink-500 text-white w-20">Register</button>
-                  </div>
-                </form>
-              </div>
-              <p className="text-center text-sm">
+                  {errors.password && (
+                    <p className="text-red-500 text-sm mt-1">{errors.password.message}</p>
+                  )}
+                </div>
+
+                <div className="flex items-center justify-center">
+                  <button type="submit" className="btn bg-pink-500 text-white w-24">
+                    Register
+                  </button>
+                </div>
+              </form>
+
+              <p className="text-center text-sm mt-4">
                 Already have an account? &nbsp;
                 <a
                   className="text-pink-500 underline cursor-pointer hover:text-pink-700"
-                  onClick={() => document.getElementById("my_modal_3").showModal()}
+                  onClick={() => document.getElementById("my_modal_3")?.showModal()}
                 >
                   Log In
                 </a>
