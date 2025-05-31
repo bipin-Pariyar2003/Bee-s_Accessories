@@ -1,8 +1,10 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div>
@@ -26,6 +28,12 @@ const SignUp = () => {
                     required
                   />
                   <input
+                    type="email"
+                    placeholder="Email"
+                    className="input w-full outline-none"
+                    required
+                  />
+                  <input
                     type="password"
                     placeholder="Password"
                     className="input input-bordered w-full"
@@ -38,7 +46,10 @@ const SignUp = () => {
               </div>
               <p className="text-center text-sm">
                 Already have an account? &nbsp;
-                <a href="/" className="text-pink-500 underline">
+                <a
+                  className="text-pink-500 underline cursor-pointer hover:text-pink-700"
+                  onClick={() => document.getElementById("my_modal_3").showModal()}
+                >
                   Log In
                 </a>
               </p>
@@ -46,7 +57,10 @@ const SignUp = () => {
           </div>
 
           <div>
-            <button className="btn bg-pink-500 text-white w-max rounded-md py-2 px-4">
+            <button
+              className="btn bg-pink-500 text-white w-max rounded-md py-2 px-4"
+              onClick={() => navigate("/")}
+            >
               Go Back
             </button>
           </div>

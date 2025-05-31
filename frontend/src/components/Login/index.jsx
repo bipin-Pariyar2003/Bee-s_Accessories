@@ -33,7 +33,7 @@ const Login = () => {
           </div>
           <p className="text-center text-sm">
             Don't have an account? &nbsp;
-            <a href="/signup" className="text-pink-500 underline">
+            <a href="/signup" className="text-pink-500 underline hover:text-pink-700">
               Sign Up
             </a>
           </p>
