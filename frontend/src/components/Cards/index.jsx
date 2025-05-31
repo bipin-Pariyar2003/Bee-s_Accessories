@@ -3,31 +3,35 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import ReusableCards from "../ReusableCards";
+import axios from "axios";
 
 const Cards = () => {
   const [randomItems, setRandomItems] = useState([]);
-  const sliderRef = useRef(null); // 1. Slider ref
+  const sliderRef = useRef(null);
 
   const getRandomItems = (data, count) => {
     const shuffled = [...data].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count); // Limit to count
+    return shuffled.slice(0, count);
   };
 
   useEffect(() => {
-    fetch("/data.json")
-      .then((res) => res.json())
-      .then((jsonData) => {
-        const selectedItems = getRandomItems(jsonData, 5);
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("http://localhost:4001/accessories");
+        const selectedItems = getRandomItems(res.data, 5);
         setRandomItems(selectedItems);
 
-        // 2. Auto swipe once after short delay
         setTimeout(() => {
           if (sliderRef.current) {
-            sliderRef.current.slickNext(); // swipe to next slide
+            sliderRef.current.slickNext();
           }
-        }, 500); // Delay helps ensure the slider has rendered
-      })
-      .catch((err) => console.error("Failed to load data:", err));
+        }, 500);
+      } catch (err) {
+        console.error("Failed to load data from backend:", err);
+      }
+    };
+
+    fetchData();
   }, []);
 
   const settings = {

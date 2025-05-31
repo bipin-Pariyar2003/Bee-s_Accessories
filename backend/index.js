@@ -1,8 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import accesoryRoute from "./route/accessories.route.js";
+import cors from "cors";
 
 const app = express();
+app.use(cors());
 dotenv.config();
 
 const port = process.env.PORT || 3000;
@@ -18,6 +21,9 @@ try {
 } catch (error) {
   console.error("Error connecting to the database:", error);
 }
+
+//define routes
+app.use("/accessories", accesoryRoute);
 
 app.listen(port, () => {
   console.log(`Server Started at port: ${port}`);

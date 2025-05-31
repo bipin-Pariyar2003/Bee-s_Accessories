@@ -19,10 +19,7 @@ const ReusableCards = ({ item }) => {
                 {item.category}
               </div>
             </h2>
-            <p>
-              A card component has a figure, a body part, and inside body there are title
-              and actions parts
-            </p>
+            <p>{item.description}</p>
             <div className="card-actions justify-end">
               <button className="badge badge-outline p-5">Rs. {item.price}/-</button>
               <button className="badge badge-primary p-5">Buy Now</button>

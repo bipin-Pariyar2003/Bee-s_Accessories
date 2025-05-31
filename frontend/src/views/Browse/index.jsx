@@ -1,10 +1,24 @@
 import React from "react";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import data from "/public/data.json";
+import axios from "axios";
+
 import ReusableCards from "components/ReusableCards";
 import { useNavigate } from "react-router-dom";
 const Browse = () => {
+  const [data, setData] = React.useState([]);
+  React.useEffect(() => {
+    const getData = async () => {
+      try {
+        const res = await axios.get("http://localhost:4001/accessories");
+        setData(res.data);
+        console.log("Data fetched successfully:", res.data);
+      } catch (err) {
+        console.error("Error fetching data:", err);
+      }
+    };
+    getData();
+  }, []);
   const navigate = useNavigate();
   return (
     <>

@@ -3,35 +3,45 @@
     "id": 1,
     "category": "Phone Accessories",
     "name": "Phone Charms",
+    "description": "Cute and stylish phone charms to personalize your device.",
     "price": 100,
-    "image": "/assets/products/phone-charm.jpg"
+    "image": "/assets/products/phone-charm.jpg",
+    "quantity": 5
   },
   {
     "id": 2,
     "category": "Hand Wears",
     "name": "Arm Cuff",
+    "description": "Cute and stylish phone charms to personalize your device.",
     "price": 200,
-    "image": "/assets/products/arm-cuff.jpg"
+    "image": "/assets/products/arm-cuff.jpg",
+    "quantity": 5
   },
   {
     "id": 3,
     "category": "Hand Wears",
     "name": "Chain Bracelet",
+    "description": "Cute and stylish phone charms to personalize your device.",
     "price": 300,
-    "image": "/assets/products/chain-bracelet.jpg"
+    "image": "/assets/products/chain-bracelet.jpg",
+    "quantity": 5
   },
   {
     "id": 4,
     "category": "Hand Wears",
     "name": "Chunky Bracelet",
+    "description": "Cute and stylish phone charms to personalize your device.",
     "price": 400,
-    "image": "/assets/products/chunky-bracelet.jpg"
+    "image": "/assets/products/chunky-bracelet.jpg",
+    "quantity": 5
   },
   {
     "id": 5,
     "category": "Ear Wears",
     "name": "Chunky Earrings",
+    "description": "Cute and stylish phone charms to personalize your device.",
     "price": 500,
-    "image": "/assets/products/chunky-earring.jpg"
+    "image": "/assets/products/chunky-earring.jpg",
+    "quantity": 5
   }
 ]
