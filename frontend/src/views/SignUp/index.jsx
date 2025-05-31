@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -13,10 +14,24 @@ const SignUp = () => {
     reset,
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Sign Up Data:", data);
-    reset(); // optional
-    // You can navigate or show success toast here
+  const onSubmit = async (data) => {
+    const userInfo = {
+      fullname: data.fullname,
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post("http://localhost:4001/users/signup", userInfo)
+      .then((response) => {
+        console.log("User registered successfully:", response.data);
+        if (response.data) {
+          alert("User registered successfully");
+        }
+      })
+      .catch((error) => {
+        console.error("Error registering user:", error);
+        alert("Error registering user. Please try again.");
+      });
   };
 
   return (
@@ -37,7 +52,7 @@ const SignUp = () => {
                     type="text"
                     placeholder="Name"
                     className="input input-bordered w-full"
-                    {...register("name", {
+                    {...register("fullname", {
                       required: "Name is required",
                       minLength: {
                         value: 3,
@@ -45,7 +60,7 @@ const SignUp = () => {
                       },
                     })}
                   />
-                  {errors.name && (
+                  {errors.fullname && (
                     <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
                   )}
                 </div>
