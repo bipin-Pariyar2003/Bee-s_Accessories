@@ -12,3 +12,8 @@ body {
   box-shadow: none;
   overflow-x: hidden;
 }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}

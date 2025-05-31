@@ -27,7 +27,7 @@ const Browse = () => {
             Back
           </button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-3">
+        <div className="grid grid-cols-1 md:grid-cols-3  mt-3">
           {data.map((item, index) => (
             <ReusableCards key={index} item={item} />
           ))}
