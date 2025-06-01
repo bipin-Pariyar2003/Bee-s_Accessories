@@ -37,7 +37,11 @@ const Fotoer = () => {
 
             {/* Instagram icon  */}
 
-            <a href="">
+            <a
+              href="https://www.instagram.com/bees.accessories_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"

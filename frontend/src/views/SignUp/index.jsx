@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -25,12 +26,14 @@ const SignUp = () => {
       .then((response) => {
         console.log("User registered successfully:", response.data);
         if (response.data) {
-          alert("User registered successfully");
+          toast.success("Registration successful!");
+          reset(); // Reset form after successful registration
         }
+        localStorage.setItem("Users", JSON.stringify(response.data.user));
       })
       .catch((error) => {
         console.error("Error registering user:", error);
-        alert("Error registering user. Please try again.");
+        toast.error("Error registering user. Please try again.");
       });
   };
 

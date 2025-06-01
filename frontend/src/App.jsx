@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./views/About";
 import Contact from "./views/Contact";
 import SignUp from "./views/SignUp";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/signup" element={<SignUp />} />
           </Routes>
         </Router>
+        <Toaster />
       </div>
     </>
   );
