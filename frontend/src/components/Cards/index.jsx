@@ -72,14 +72,20 @@ const Cards = () => {
   return (
     <>
       <div className="max-w-screen-2xl mt-10 container mx-auto px-4 md:px-20">
-        <h1 className="text-xl font-semibold pb-5">Get Your Accessories</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam molestiae
-          aliquam cumque culpa soluta suscipit minima est dolorum sapiente pariatur
-          accusamus impedit eos assumenda harum quas animi, dignissimos nobis dolores!
+        <h1 className="text-3xl font-semibold pb-5 text-pink-500 animate-bounce">
+          #BeYouWithBees
+        </h1>
+        <p className="text-thin mb-5">
+          Bee’s Accessories is your go-to online store for trendy and stylish accessories
+          specially curated for girls. From earrings and rings to phone charms and lockets
+          we bring you the latest designs at affordable prices.
         </p>
+        <p className="text-pink-500">Style made simple. Delivered to your door. 💛</p>
       </div>
       <div>
+        <p className="text-center m-5 flex items-center justify-center gap-2 animate-pulse transition-transform duration-300 hover:translate-x-2">
+          <span className="animate-bounce">👉</span> Swipe to see latest accessories
+        </p>
         <Slider ref={sliderRef} {...settings}>
           {randomItems.map((item) => (
             <ReusableCards key={item.id} item={item} />
