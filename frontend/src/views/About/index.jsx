@@ -10,12 +10,12 @@ const About = () => {
     <>
       <div>
         <Navbar />
-        <div className="min-h-screen flex flex-col mt-8 p-20 space-y-20">
+        <div className="min-h-screen flex flex-col mt-8 p-20 space-y-8">
           <h1 className="text-2xl text-center">
             Let’s take you behind the sparkle — get to know{" "}
             <span className="text-pink-500">~Bee’s Accessories!</span>
           </h1>
-          <div className="flex flex-col items-center space-y-4 justify-center">
+          <div className="flex flex-col items-center space-y-2 justify-center">
             <div>
               <p>
                 Or let's Shop your favourite{" "}
