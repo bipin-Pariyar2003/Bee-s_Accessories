@@ -10,7 +10,7 @@ const About = () => {
     <>
       <div>
         <Navbar />
-        <div className="min-h-screen flex flex-col mt-8 p-20 space-y-8 ">
+        <div className="min-h-screen flex flex-col mt-16 md:mt-8 p-2  md:p-20 space-y-8 ">
           <h1 className="text-2xl text-center">
             Let’s take you behind the sparkle — get to know{" "}
             <span className="text-pink-500">~Bee’s Accessories!</span>
@@ -32,30 +32,30 @@ const About = () => {
             </div>
           </div>
 
-          {/* who we are  */}
-          <div className="flex flex-col space-y-20">
-            <div className="flex flex-col md:flex-row mb-6 justify-evenly  items-center">
+          <div className="flex flex-col space-y-4 md:space-y-20 divide-y-2  md:divide-y-0 divide-pink-500">
+            {/* who we are  */}
+            <div className="flex flex-col md:flex-row mb-2 justify-evenly  items-center ">
               <div className="flex-1 flex justify-center oder-1 ">
                 <img
                   src="/public/images/logo.png"
                   alt="Bee's Accessories Logo"
-                  className="w-80 h-80 border rounded-full object-cover"
+                  className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
               </div>
               <div className="flex-1">
-                <p className="text-xl leading-loose p-8 order-2 ">
+                <p className="text-md md:text-xl leading-loose p-8 order-2 ">
                   <span className="text-pink-500 text-2xl">Who we are?</span> <br />
                   Since 2025 <br /> "Bee’s Accessories is an online-based accessory store
                   that brings you the latest and most stylish pieces — perfect for those
-                  who love to express themselves through fashion.s"
+                  who love to express themselves through fashion."
                 </p>
               </div>
             </div>
 
             {/* why we started  */}
-            <div className="flex flex-col md:flex-row mb-6 justify-evenly space-x-6 items-center">
+            <div className="flex flex-col md:flex-row py-6 md:py-0 mb-6 justify-evenly space-x-6 items-center ">
               <div className="flex-1 order-2 md:order-1">
-                <p className="text-xl leading-loose p-4">
+                <p className="text-md md:text-xl leading-loose p-4">
                   <span className="text-pink-500 text-2xl">Why we started?</span> <br />
                   "We started Bee’s Accessories with one simple idea:
                   <ul>
@@ -70,22 +70,22 @@ const About = () => {
                 <img
                   src="/public/aboutImages/why_we_started.png"
                   alt="Bee's Accessories Logo"
-                  className="h-80 w-80  border rounded-full object-cover"
+                  className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
               </div>
             </div>
 
             {/* our collection  */}
-            <div className="flex flex-col md:flex-row mb-6 justify-evenly space-x-6 items-center">
+            <div className="flex flex-col md:flex-row py-6 md:py-0 mb-6 justify-evenly space-x-6 items-center ">
               <div className="flex-1 flex justify-center">
                 <img
                   src="/public/aboutImages/our_collection.png"
                   alt="Bee's Accessories Logo"
-                  className="w-80 h-80 border rounded-full object-cover"
+                  className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
               </div>
               <div className="flex-1">
-                <p className="text-xl leading-loose p-4">
+                <p className="text-md md:text-xl leading-loose p-4">
                   <span className="text-pink-500 text-2xl">Our Collection</span> <br />
                   Our collection includes: Earrings & Ear Tops – elegant, trendy, or
                   playful styles Rings & Arm Cuffs – complete your outfit with a touch of
@@ -96,9 +96,9 @@ const About = () => {
             </div>
 
             {/* our focus  */}
-            <div className="flex flex-col md:flex-row mb-6 justify-evenly space-x-6 items-center">
+            <div className="flex flex-col md:flex-row py-6 md:py-0 mb-6 justify-evenly space-x-6 items-center ">
               <div className="flex-1 order-2 md:order-1">
-                <p className="text-xl leading-loose p-4">
+                <p className="text-md md:text-xl leading-loose p-4">
                   <span className="text-pink-500 text-2xl">Our Focus</span> <br />
                   We focus on offering affordable and fashion-forward accessories with a
                   smooth and friendly shopping experience.✨
@@ -108,23 +108,23 @@ const About = () => {
                 <img
                   src="/public/aboutImages/our_focus.png"
                   alt="Bee's Accessories Logo"
-                  className="w-80 h-80 border rounded-full object-cover"
+                  className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
               </div>
             </div>
 
             {/* why choose us  */}
-            <div className="flex flex-col md:flex-row mb-6 justify-evenly space-x-6 items-center">
+            <div className="flex flex-col md:flex-row py-6 md:py-0 mb-6 justify-evenly space-x-6 items-center">
               <div className="flex-1 flex justify-center">
                 <img
                   src="/public/aboutImages/why_choose_us.png"
                   alt="Bee's Accessories Logo"
-                  className="w-80 h-80 border rounded-full object-cover"
+                  className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
               </div>
               <div className="flex-1">
-                <p className="text-xl leading-loose">
-                  <span className="text-pink-500">🌟 Why Choose Us?</span>
+                <p className="text-md md:text-xl leading-loose">
+                  <span className="text-pink-500 text-2xl">🌟 Why Choose Us?</span>
                   <ul className="list-disc pl-6">
                     <li>Trendy & high-quality products</li>
                     <li> Affordable pricing </li>
@@ -137,9 +137,9 @@ const About = () => {
             </div>
 
             {/* thank you message  */}
-            <div className="flex flex-col md:flex-row mb-6 justify-evenly space-x-6 items-center">
+            <div className="flex flex-col md:flex-row py-6 md:py-0 mb-6 justify-evenly space-x-6 items-center ">
               <div className="flex-1 order-2 md:order-1">
-                <p className="text-xl leading-loose p-4">
+                <p className="text-md md:text-xl leading-loose p-4">
                   <span className="text-pink-500 text-2xl">
                     Thank You for Your Support
                   </span>{" "}
@@ -155,7 +155,7 @@ const About = () => {
                 <img
                   src="/public/aboutImages/thank_you.png"
                   alt="Bee's Accessories Logo"
-                  className="w-80 h-80 border rounded-full object-cover"
+                  className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
               </div>
             </div>

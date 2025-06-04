@@ -5,10 +5,10 @@ const Founder = () => {
     <>
       <hr className="border-1 border-pink-500" />
       <div className="mt-8 ">
-        <h1 className="text-2xl text-center text-pink-500">
+        <h1 className="text-xl md:text-2xl text-center text-pink-500">
           💌 From the hearts behind Bee’s Accessories.
         </h1>
-        <p className="text-xl text-center mt-4 leading-loose ">
+        <p className="text-md md:text-xl text-center mt-4 leading-loose ">
           As founders, <span className="text-pink-500">Bipin Pariyar</span> and{" "}
           <span className="text-pink-500">Bipika Chaudhary</span> turned their love for
           creativity and self-expression into a space that celebrates style,
@@ -17,24 +17,24 @@ const Founder = () => {
           and our promise to you.
         </p>
 
-        <div className="flex flex-row mt-10  items-start justify-evenly space-x-16">
+        <div className="flex flex-col md:flex-row mt-10  items-start justify-evenly space-y-12 md:space-y-0  space-x-0 md:space-x-16">
           {/* bipika  */}
-          <div className="flex-1">
+          <div className="flex-1 items-center justify-center w-full bg-pink-100 rounded-lg p-6 ">
             <div className="flex flex-col justify-center items-center space-y-4 ">
               <div>
                 <img
                   src="/public/founders/bipika.jpg"
-                  className="rounded-full h-80 w-80 object-cover border"
+                  className="rounded-full h-40 w-40 md:h-80 md:w-80 object-cover border"
                   alt=""
                 />
               </div>
               <div>
-                <p>
-                  Founder <span className="text-pink-500">~Ms. Bipika Chaudhary</span>{" "}
+                <p className="text-xs md:text-base leading-loose ">
+                  Founder <span className="text-pink-500 ">~Ms. Bipika Chaudhary</span>{" "}
                 </p>
               </div>
               <div>
-                <p className="text-justify text-lg leading-loose ">
+                <p className="text-justify text-sm md:text-lg leading-loose ">
                   "Hey lovely! I’m Bipika, co-founder of Bee’s Accessories, and your go-to
                   girl when it comes to picking the cutest, trendiest pieces! I’ve always
                   loved accessorizing, it's such a fun way to express who you are. So,
@@ -60,22 +60,22 @@ const Founder = () => {
           </div>
 
           {/* bipin  */}
-          <div className="flex-1">
+          <div className="flex-1 items-center justify-center w-full bg-sky-100 rounded-lg p-6 ">
             <div className="flex flex-col justify-center items-center space-y-4">
               <div>
                 <img
                   src="/public/founders/bipin.jpg"
-                  className="rounded-full h-80 w-80 object-cover border"
+                  className="rounded-full h-40 w-40 md:h-80 md:w-80 object-cover border"
                   alt=""
                 />
               </div>
               <div>
-                <p>
+                <p className="text-xs md:text-base leading-loose ">
                   Co-Founder <span className="text-pink-500">~Mr. Bipin Pariyar</span>
                 </p>
               </div>
               <div>
-                <p className=" text-justify text-lg leading-loose ">
+                <p className=" text-justify  text-sm md:text-lg leading-loose ">
                   "Hi there! I’m Bipin, one of the co-founders of Bee’s Accessories. As
                   someone who’s always been inspired by creativity and style, starting
                   Bee’s with my best friend felt like the perfect way to blend passion and
