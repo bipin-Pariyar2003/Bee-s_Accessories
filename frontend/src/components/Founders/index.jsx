@@ -5,7 +5,7 @@ const Founder = () => {
     <>
       <hr className="border-1 border-pink-500" />
       <div className="mt-8 ">
-        <h1 className="text-xl md:text-2xl text-center text-pink-500">
+        <h1 className="text-xl md:text-2xl text-center text-pink-500 ">
           💌 From the hearts behind Bee’s Accessories.
         </h1>
         <p className="text-md md:text-xl text-center mt-4 leading-loose ">
@@ -75,7 +75,7 @@ const Founder = () => {
                 </p>
               </div>
               <div>
-                <p className=" text-justify  text-sm md:text-lg leading-loose ">
+                <p className=" text-justify  text-sm md:text-lg leading-loose">
                   "Hi there! I’m Bipin, one of the co-founders of Bee’s Accessories. As
                   someone who’s always been inspired by creativity and style, starting
                   Bee’s with my best friend felt like the perfect way to blend passion and

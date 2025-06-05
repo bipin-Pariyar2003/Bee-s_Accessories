@@ -11,7 +11,7 @@ const About = () => {
       <div>
         <Navbar />
         <div className="min-h-screen flex flex-col mt-16 md:mt-8 p-2  md:p-20 space-y-8 ">
-          <h1 className="text-2xl text-center">
+          <h1 className="text-2xl text-center font-semibold ">
             Let’s take you behind the sparkle — get to know{" "}
             <span className="text-pink-500">~Bee’s Accessories!</span>
           </h1>

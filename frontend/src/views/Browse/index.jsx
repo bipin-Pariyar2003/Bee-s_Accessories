@@ -25,7 +25,7 @@ const Browse = () => {
       <Navbar />
       <div className="min-h-screen container mx-auto px-4 md:px-20">
         <div className="mt-28 items-center justify-center text-center">
-          <h1 className="text-2xl ">
+          <h1 className="text-2xl font-semibold">
             Hey!! We’ve curated something just for you{"\n"}
             <span className="text-pink-500"> ~dive in!</span>
           </h1>

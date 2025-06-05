@@ -42,7 +42,7 @@ const SignUp = () => {
       <div>
         <Navbar />
         <div className="flex flex-col space-y-8 items-center justify-center h-screen">
-          <div className="border-2 border-gray-300 rounded-lg shadow-xl p-12 w-96">
+          <div className="border-2 border-gray-300 rounded-lg shadow-xl p-12 w-96 bg-pink-100">
             <div className="max-w-md mx-auto">
               <h3 className="font-bold text-2xl underline text-center">Sign Up</h3>
               <form
