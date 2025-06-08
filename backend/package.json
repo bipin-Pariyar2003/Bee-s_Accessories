@@ -18,7 +18,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build-client": "npm install --prefix ../frontend && npm run build --prefix ../frontend"
+    "build-client": "npm install --prefix ../frontend && npm run build --prefix ../frontend",
+    "post-install": "npm run build-client"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
