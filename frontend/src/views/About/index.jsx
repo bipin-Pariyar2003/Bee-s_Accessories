@@ -4,6 +4,14 @@ import Footer from "../../components/Footer";
 import Founders from "../../components/Founders";
 import { useNavigate } from "react-router-dom";
 
+// Import images from public/images and public/aboutImages
+import logo from "/images/logo.png";
+import whyWeStarted from "/aboutImages/why_we_started.png";
+import ourCollection from "/aboutImages/our_collection.png";
+import ourFocus from "/aboutImages/our_focus.png";
+import whyChooseUs from "/aboutImages/why_choose_us.png";
+import thankYou from "/aboutImages/thank_you.png";
+
 const About = () => {
   const navigate = useNavigate();
   return (
@@ -37,7 +45,7 @@ const About = () => {
             <div className="flex flex-col md:flex-row mb-2 justify-evenly  items-center ">
               <div className="flex-1 flex justify-center oder-1 ">
                 <img
-                  src="/images/logo.png"
+                  src={logo}
                   alt="Bee's Accessories Logo"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
@@ -63,13 +71,13 @@ const About = () => {
                       Make beautiful, fun, and affordable accessories easily accessible to
                       every one who wants to shine in her own way."
                     </li>
-                  </ul>{" "}
+                  </ul>
                 </p>
               </div>
               <div className="flex-1 flex justify-center order-1 md:order-2">
                 <img
-                  src="/aboutImages/why_we_started.png"
-                  alt="Bee's Accessories Logo"
+                  src={whyWeStarted}
+                  alt="Why We Started"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
               </div>
@@ -79,8 +87,8 @@ const About = () => {
             <div className="flex flex-col md:flex-row py-6 md:py-0 mb-6 justify-evenly space-x-6 items-center ">
               <div className="flex-1 flex justify-center">
                 <img
-                  src="/aboutImages/our_collection.png"
-                  alt="Bee's Accessories Logo"
+                  src={ourCollection}
+                  alt="Our Collection"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
               </div>
@@ -106,8 +114,8 @@ const About = () => {
               </div>
               <div className="flex-1 flex justify-center order-1 md:order-2">
                 <img
-                  src="/aboutImages/our_focus.png"
-                  alt="Bee's Accessories Logo"
+                  src={ourFocus}
+                  alt="Our Focus"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
               </div>
@@ -117,8 +125,8 @@ const About = () => {
             <div className="flex flex-col md:flex-row py-6 md:py-0 mb-6 justify-evenly space-x-6 items-center">
               <div className="flex-1 flex justify-center">
                 <img
-                  src="/aboutImages/why_choose_us.png"
-                  alt="Bee's Accessories Logo"
+                  src={whyChooseUs}
+                  alt="Why Choose Us"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
               </div>
@@ -153,8 +161,8 @@ const About = () => {
               </div>
               <div className="flex-1 flex justify-center order-1 md:order-2">
                 <img
-                  src="/aboutImages/thank_you.png"
-                  alt="Bee's Accessories Logo"
+                  src={thankYou}
+                  alt="Thank You"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
               </div>
