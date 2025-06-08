@@ -37,7 +37,7 @@ const About = () => {
             <div className="flex flex-col md:flex-row mb-2 justify-evenly  items-center ">
               <div className="flex-1 flex justify-center oder-1 ">
                 <img
-                  src="/public/images/logo.png"
+                  src="/images/logo.png"
                   alt="Bee's Accessories Logo"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
@@ -68,7 +68,7 @@ const About = () => {
               </div>
               <div className="flex-1 flex justify-center order-1 md:order-2">
                 <img
-                  src="/public/aboutImages/why_we_started.png"
+                  src="/aboutImages/why_we_started.png"
                   alt="Bee's Accessories Logo"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
@@ -79,7 +79,7 @@ const About = () => {
             <div className="flex flex-col md:flex-row py-6 md:py-0 mb-6 justify-evenly space-x-6 items-center ">
               <div className="flex-1 flex justify-center">
                 <img
-                  src="/public/aboutImages/our_collection.png"
+                  src="/aboutImages/our_collection.png"
                   alt="Bee's Accessories Logo"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
@@ -106,7 +106,7 @@ const About = () => {
               </div>
               <div className="flex-1 flex justify-center order-1 md:order-2">
                 <img
-                  src="/public/aboutImages/our_focus.png"
+                  src="/aboutImages/our_focus.png"
                   alt="Bee's Accessories Logo"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
@@ -117,7 +117,7 @@ const About = () => {
             <div className="flex flex-col md:flex-row py-6 md:py-0 mb-6 justify-evenly space-x-6 items-center">
               <div className="flex-1 flex justify-center">
                 <img
-                  src="/public/aboutImages/why_choose_us.png"
+                  src="/aboutImages/why_choose_us.png"
                   alt="Bee's Accessories Logo"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
@@ -153,7 +153,7 @@ const About = () => {
               </div>
               <div className="flex-1 flex justify-center order-1 md:order-2">
                 <img
-                  src="/public/aboutImages/thank_you.png"
+                  src="/aboutImages/thank_you.png"
                   alt="Bee's Accessories Logo"
                   className="w-40 h-40 md:w-80 md:h-80 border rounded-full object-cover"
                 />
