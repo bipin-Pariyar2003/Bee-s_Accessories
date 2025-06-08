@@ -6,6 +6,7 @@ import About from "./views/About";
 import Contact from "./views/Contact";
 import SignUp from "./views/SignUp";
 import { Toaster } from "react-hot-toast";
+import Thankyou from "./views/Thankyou";
 
 const App = () => {
   return (
@@ -19,6 +20,8 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/browse" element={<Browse />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/thank-you" element={<Thankyou />} />
+            {/* Add more routes as needed */}
           </Routes>
         </Router>
         <Toaster />
