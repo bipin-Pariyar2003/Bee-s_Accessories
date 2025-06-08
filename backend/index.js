@@ -23,6 +23,34 @@ mongoose
 // API routes
 app.use("/accessories", accesoryRoute);
 app.use("/users", usersRoute);
+printRoutes(app);
+
+// Helper to log all registered routes with their methods
+function printRoutes(app) {
+  if (!app._router) {
+    console.log("No routes registered yet.");
+    return;
+  }
+  app._router.stack.forEach((middleware) => {
+    if (middleware.route) {
+      // routes registered directly on the app
+      const methods = Object.keys(middleware.route.methods).join(", ").toUpperCase();
+      console.log(`${methods} ${middleware.route.path}`);
+    } else if (
+      middleware.name === "router" &&
+      middleware.handle &&
+      middleware.handle.stack
+    ) {
+      // router middleware
+      middleware.handle.stack.forEach((handler) => {
+        if (handler.route) {
+          const methods = Object.keys(handler.route.methods).join(", ").toUpperCase();
+          console.log(`${methods} ${handler.route.path}`);
+        }
+      });
+    }
+  });
+}
 
 // Get __dirname in ES module (since you're using `type: "module"`)
 const __filename = fileURLToPath(import.meta.url);
@@ -32,7 +60,7 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
 
 // Serve index.html for SPA routes
-app.get("*", (req, res) => {
+app.get(/^\/(?!accessories|users).*/, (req, res) => {
   res.sendFile(path.join(__dirname, "..", "frontend", "dist", "index.html"));
 });
 
