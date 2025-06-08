@@ -1,6 +1,6 @@
 import React from "react";
-import bipikaImg from "../assets/founders/bipika.jpg";
-import bipinImg from "../assets/founders/bipin.jpg";
+import bipikaImg from "/founders/bipika.jpg";
+import bipinImg from "/founders/bipin.jpg";
 const Founder = () => {
   return (
     <>
