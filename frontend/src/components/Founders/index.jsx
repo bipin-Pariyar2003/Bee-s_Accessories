@@ -1,5 +1,6 @@
 import React from "react";
-
+import bipikaImg from "../assets/founders/bipika.jpg";
+import bipinImg from "../assets/founders/bipin.jpg";
 const Founder = () => {
   return (
     <>
@@ -23,7 +24,7 @@ const Founder = () => {
             <div className="flex flex-col justify-center items-center space-y-4 ">
               <div>
                 <img
-                  src="/public/founders/bipika.jpg"
+                  src={bipikaImg}
                   className="rounded-full h-40 w-40 md:h-80 md:w-80 object-cover border"
                   alt=""
                 />
@@ -64,7 +65,7 @@ const Founder = () => {
             <div className="flex flex-col justify-center items-center space-y-4">
               <div>
                 <img
-                  src="/public/founders/bipin.jpg"
+                  src={bipinImg}
                   className="rounded-full h-40 w-40 md:h-80 md:w-80 object-cover border"
                   alt=""
                 />
