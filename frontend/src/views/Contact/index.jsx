@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen flex flex-col items-center space-y-8 mt-10 ">
+      <div className="min-h-screen flex flex-col items-center space-y-8 mt-10 p-4">
         <div className="mt-10 space-y-4 text-center">
           <h1 className="text-2xl text-pink-500 font-semibold">Get in Touch 💌</h1>
           <p>
