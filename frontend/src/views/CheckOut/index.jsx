@@ -10,12 +10,12 @@ const CheckOut = () => {
       <div className="min-h-screen flex flex-col items-center justify-center gap-6 p-20">
         <Navbar />
 
-        <h1 className="text-lg md:text-2xl font-bold text-pink-500 mt-16 md:mt-6 text-center">
+        <h1 className="text-lg md:text-2xl font-bold text-pink-500 mt-0 text-center">
           Check out the cart details, fill out the form and proceed to payment
         </h1>
-        <div className="flex flex-col md:flex-row items-center justify-center min-h-1/2  max-w-4xl p-6 bg-white shadow-md rounded-lg gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-center min-h-1/2  max-w-5xl p-6 bg-white shadow-md rounded-lg gap-6">
           <div className="bg-pink-100 p-12 rounded-lg w-full h-full flex-1">
-            <h1>Cart Details</h1>
+            <h1 className="underline">Cart Details</h1>
             <div className="overflow-x-auto">
               <table className="table">
                 {/* head */}
@@ -56,12 +56,12 @@ const CheckOut = () => {
                 </tbody>
               </table>
               <h1>
-                Total: <span className="text-red-500">Rs. 600</span>
+                Total: <span className="text-green-700 font-bold">Rs. 600</span>
               </h1>
             </div>
           </div>
           <div className="flex-1 bg-blue-100  min-w-[450px] p-12 rounded-lg space-y-4">
-            <h1>Fill Out Form</h1>
+            <h1 className="underline">Fill Out Form</h1>
 
             <div className="justify-center items-center flex flex-col">
               <form
@@ -93,12 +93,14 @@ const CheckOut = () => {
                 />
                 <input
                   type="number"
-                  id="phone"
-                  placeholder="Alternate phone number"
+                  id="phone2"
+                  placeholder="Alternative phone number"
                   className="input input-bordered w-full mb-4"
                 />
 
-                <button className="btn btn-primary w-full">Place Order</button>
+                <button className="btn bg-green-700 text-white w-full">
+                  Place Order
+                </button>
               </form>
             </div>
           </div>
