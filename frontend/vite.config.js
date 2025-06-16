@@ -9,6 +9,7 @@ export default defineConfig({
       components: "/src/components",
       views: "/src/views",
       context: "/src/context",
+      alerts: "/src/components/alerts",
     },
   },
 });

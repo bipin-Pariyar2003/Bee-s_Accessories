@@ -14,7 +14,7 @@ const Home = () => {
       <Cards />
       <div className="text-center mt-16">
         <button
-          className="btn bg-green-700 text-white"
+          className="btn bg-green-700 text-white hover:bg-green-800 rounded-lg"
           onClick={() => navigate("/browse")}
         >
           Browse All Products

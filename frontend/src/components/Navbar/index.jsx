@@ -44,8 +44,8 @@ const Navbar = () => {
   const navbarItems = (
     <>
       {authUser && (
-        <li>
-          <p className="text-pink-500 bg-pink-100 rounded-md">{authUser?.fullname}</p>
+        <li className="mr-4">
+          <p className="text-blue-500">Hello {authUser?.fullname}!!🩷</p>
         </li>
       )}
       <svg
