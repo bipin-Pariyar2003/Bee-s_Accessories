@@ -8,7 +8,7 @@ const CartModal = () => {
       <dialog id="CartModal" className="modal">
         <div className="modal-box bg-blue-100">
           <div className="bg-pink-100 p-12 rounded-lg w-full h-full flex-1">
-            <h1 className="underline">Cart Details</h1>
+            <h1 className="underline">My Cart</h1>
             <div className="overflow-x-auto">
               <table className="table">
                 {/* head */}
