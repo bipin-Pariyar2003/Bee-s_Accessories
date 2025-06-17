@@ -169,12 +169,12 @@ const Navbar = () => {
                   Login
                 </a>
                 <Login />
-                <CartModal />
               </>
             )}
           </div>
         </div>
       </div>
+      <CartModal />
     </>
   );
 };
