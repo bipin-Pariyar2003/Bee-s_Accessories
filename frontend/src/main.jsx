@@ -15,7 +15,7 @@ document.documentElement.setAttribute("data-theme", theme); // For DaisyUI
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
-      <div className="dark:bg-black dark:bg-opacity-800 dark:text-white">
+      <div className="">
         <App />
       </div>
     </AuthProvider>

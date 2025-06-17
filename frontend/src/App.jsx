@@ -12,7 +12,7 @@ import CheckOut from "views/CheckOut";
 const App = () => {
   return (
     <>
-      <div className="dark:bg-gray-800 dark:text-white">
+      <div className="">
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
