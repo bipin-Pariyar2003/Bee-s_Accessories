@@ -4,13 +4,30 @@ import Login from "../Login";
 import { useNavigate } from "react-router-dom";
 import LogInAlert from "../alerts/LoginAlert";
 import { set } from "react-hook-form";
+import { useCart } from "../../context/CartContext";
+import toast from "react-hot-toast";
 const ReusableCards = ({ item }) => {
   const navigate = useNavigate();
   const [authUser, setAuthUser] = useAuth();
   const [showLogInAlert, setShowLogInAlert] = React.useState(false);
+  const { cart, setCart } = useCart();
   const handleBuyNow = () => {
     authUser ? navigate("/check-out") : setShowLogInAlert(true);
   };
+  const handleAddToCart = () => {
+    const existing = cart.find((c) => c.product._id === item._id);
+    let newCart;
+    if (existing) {
+      newCart = cart.map((c) =>
+        c.product._id === item._id ? { ...c, quantity: c.quantity + 1 } : c
+      );
+    } else {
+      newCart = [...cart, { product: item, quantity: 1 }];
+    }
+    toast.success("Item added to cart hot toaster");
+    setCart(newCart); // updates context and sends to backend
+  };
+
   return (
     <>
       <div className="max-w-screen-2xl my-10 container mx-auto px-4 md:px-20">
@@ -32,7 +49,10 @@ const ReusableCards = ({ item }) => {
             <p>{item.description}</p>
             <div className="card-actions justify-end">
               <button className="badge badge-outline p-5">Rs. {item.price}/-</button>
-              <button className="badge badge-outline p-5 bg-pink-500 text-white">
+              <button
+                className="badge badge-outline p-5 bg-pink-500 text-white"
+                onClick={handleAddToCart}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 576 512"

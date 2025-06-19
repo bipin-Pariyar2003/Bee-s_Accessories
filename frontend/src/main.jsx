@@ -3,6 +3,8 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import AuthProvider from "context/AuthProvider/index.jsx";
+import { CartProvider } from "context/CartContext/index.jsx";
+import { Toaster } from "react-hot-toast";
 
 // 👇 Force theme manually BEFORE React renders anything
 const theme = localStorage.getItem("theme") || "light";
@@ -15,9 +17,13 @@ document.documentElement.setAttribute("data-theme", theme); // For DaisyUI
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
-      <div className="">
-        <App />
-      </div>
+      <CartProvider>
+        <Toaster position="top-center" reverseOrder={false}>
+          <div className="">
+            <App />
+          </div>
+        </Toaster>
+      </CartProvider>
     </AuthProvider>
   </StrictMode>
 );

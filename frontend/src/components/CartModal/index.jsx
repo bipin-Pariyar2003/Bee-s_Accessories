@@ -1,8 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useCart } from "../../context/CartContext";
 const CartModal = () => {
   const navigate = useNavigate();
+  const { cart } = useCart();
+
+  const totalPrice = cart.reduce(
+    (sum, item) => sum + item.product.price * item.quantity,
+    0
+  );
   return (
     <>
       <dialog id="CartModal" className="modal">
@@ -22,34 +28,27 @@ const CartModal = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {/* row 1 */}
-                  <tr>
-                    <th>1</th>
-                    <td>Phone Charms</td>
-                    <td>2</td>
-                    <td>100</td>
-                    <td>200</td>
-                  </tr>
-                  {/* row 2 */}
-                  <tr>
-                    <th>2</th>
-                    <td>Chunky Ring</td>
-                    <td>1</td>
-                    <td>200</td>
-                    <td>200</td>
-                  </tr>
-                  {/* row 3 */}
-                  <tr>
-                    <th>3</th>
-                    <td>Phone Charms</td>
-                    <td>2</td>
-                    <td>100</td>
-                    <td>200</td>
-                  </tr>
+                  {cart.length === 0 ? (
+                    <tr>
+                      <td colSpan={5} className="text-center">
+                        Your cart is empty
+                      </td>
+                    </tr>
+                  ) : (
+                    cart.map((item, index) => (
+                      <tr key={item.product._id}>
+                        <th>{index + 1}</th>
+                        <td>{item.product.name}</td>
+                        <td>{item.quantity}</td>
+                        <td>Rs. {item.product.price}</td>
+                        <td>Rs. {item.product.price * item.quantity}</td>
+                      </tr>
+                    ))
+                  )}
                 </tbody>
               </table>
               <h1>
-                Total: <span className="text-green-700 font-bold">Rs. 600</span>
+                Total: <span className="text-green-700 font-bold">Rs. {totalPrice}</span>
               </h1>
             </div>
           </div>
