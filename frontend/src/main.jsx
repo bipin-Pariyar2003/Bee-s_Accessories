@@ -18,11 +18,10 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
       <CartProvider>
-        <Toaster position="top-center" reverseOrder={false}>
-          <div className="">
-            <App />
-          </div>
-        </Toaster>
+        <div className="">
+          <App />
+        </div>
+        <Toaster position="top-center" reverseOrder={false} />
       </CartProvider>
     </AuthProvider>
   </StrictMode>

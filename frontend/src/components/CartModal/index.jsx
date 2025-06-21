@@ -1,14 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
+
 const CartModal = () => {
   const navigate = useNavigate();
-  const { cart } = useCart();
+  const { cart = [] } = useCart() || {}; // safe fallback
 
   const totalPrice = cart.reduce(
     (sum, item) => sum + item.product.price * item.quantity,
     0
   );
+
   return (
     <>
       <dialog id="CartModal" className="modal">
@@ -17,7 +19,6 @@ const CartModal = () => {
             <h1 className="underline">My Cart</h1>
             <div className="overflow-x-auto">
               <table className="table">
-                {/* head */}
                 <thead>
                   <tr>
                     <th>S.N</th>
@@ -55,7 +56,6 @@ const CartModal = () => {
 
           <div className="modal-action">
             <form method="dialog" className="flex gap-2">
-              {/* if there is a button in form, it will close the modal */}
               <button className="btn btn-primary" onClick={() => navigate("/check-out")}>
                 Check Out
               </button>

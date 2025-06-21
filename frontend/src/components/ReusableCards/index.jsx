@@ -24,7 +24,7 @@ const ReusableCards = ({ item }) => {
     } else {
       newCart = [...cart, { product: item, quantity: 1 }];
     }
-    toast.success("Item added to cart hot toaster");
+    toast.success("Item added to cart");
     setCart(newCart); // updates context and sends to backend
   };
 
