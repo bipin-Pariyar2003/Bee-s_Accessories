@@ -12,9 +12,14 @@ const ReusableCards = ({ item }) => {
   const [showLogInAlert, setShowLogInAlert] = React.useState(false);
   const { cart, setCart } = useCart();
   const handleBuyNow = () => {
-    authUser ? navigate("/check-out") : setShowLogInAlert(true);
+    authUser ? navigate("/check-out") : toast.error("Please log in to buy now");
   };
   const handleAddToCart = () => {
+    if (!authUser) {
+      toast.error("Please log in to add to cart");
+
+      return;
+    }
     const existing = cart.find((c) => c.product._id === item._id);
     let newCart;
     if (existing) {

@@ -9,6 +9,7 @@ export const CartProvider = ({ children }) => {
   const { authUser } = useAuth(); // ✅ get current user
 
   useEffect(() => {
+    if (authUser === undefined) return;
     if (authUser) {
       getCart()
         .then((res) => setCart(res.data))
