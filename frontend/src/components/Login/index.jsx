@@ -2,7 +2,9 @@ import React from "react";
 import { set, useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { Navigate, useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -26,6 +28,7 @@ const Login = () => {
 
           setTimeout(() => {
             window.location.reload(); // Reload the page to reflect the changes
+            navigate("/"); // Redirect to home page after login
           }, 1000);
         }
         localStorage.setItem("Users", JSON.stringify(response.data.user));

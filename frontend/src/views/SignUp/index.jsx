@@ -28,6 +28,7 @@ const SignUp = () => {
         if (response.data) {
           toast.success("Registration successful! Please log in.");
           reset(); // Reset form after successful registration
+          // Redirect to login page
         }
         localStorage.setItem("Users", JSON.stringify(response.data.user));
       })
