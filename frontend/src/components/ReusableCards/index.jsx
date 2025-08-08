@@ -53,7 +53,9 @@ const ReusableCards = ({ item }) => {
             </h2>
             <p>{item.description}</p>
             <div className="card-actions justify-end">
-              <button className="badge badge-outline p-5">Rs. {item.price}/-</button>
+              <button className="badge p-5 bg-green-700 text-white cursor-default">
+                Rs. {item.price}/-
+              </button>
               <button
                 className="badge badge-outline p-5 bg-pink-500 text-white"
                 onClick={handleAddToCart}
