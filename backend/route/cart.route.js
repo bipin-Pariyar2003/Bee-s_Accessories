@@ -3,7 +3,7 @@ import express from "express";
 import { requireAuth } from "../middleware/auth.middleware.js";
 import User from "../model/users.model.js";
 
-console.log("Car Route Loaded");
+console.log("Cart Route Loaded");
 
 const router = express.Router();
 
